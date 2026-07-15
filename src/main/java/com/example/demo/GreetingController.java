@@ -9,6 +9,7 @@ public class GreetingController {
 
 	@GetMapping("/greeting")
 	public String greeting(@RequestParam String name) {
+		System.out.println("User entered name is: "+ name );
 		return "Hello, " + name + "!";
 	}
 
