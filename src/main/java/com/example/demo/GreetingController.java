@@ -7,10 +7,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingController {
 
+	private final GreetingService greetingService;
+
+	public GreetingController(GreetingService greetingService) {
+		this.greetingService = greetingService;
+	}
+
 	@GetMapping("/greeting")
 	public String greeting(@RequestParam String name) {
-		System.out.println("User entered name is: "+ name );
-		return "Hello, " + name + "!";
+		greetingService.logName(name);
+		return greetingService.appendGreeting(name);
 	}
 
 }
