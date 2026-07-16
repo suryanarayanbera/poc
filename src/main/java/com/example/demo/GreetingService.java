@@ -14,6 +14,8 @@ public class GreetingService {
 	public void logName(String name) {
 		log.info("User entered name = {}", name);
 		System.out.println("User entered name = " + name);
+		System.out.println("User entered name = " + name);
+		//TODO: Add more logic here if needed
 		//TODO: Add more logic here if needed
 		//TODO: Add more logic here if needed
 	}
